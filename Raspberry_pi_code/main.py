@@ -15,14 +15,14 @@ from email.utils import COMMASPACE, formatdate
 from email import encoders
 
 msg = MIMEMultipart()
-fromaddr = "pusparajthapaliya8147@gmail.com"
-toaddr = "sujan.pandey6@gmail.com"
-toaddr1 = "alvinpoudels@gmail.com"
+fromaddr = "sender@gmail.com"
+toaddr = "receiver1@gmail.com"
+toaddr1 = "receiver2@gmail.com"
 msg = MIMEMultipart()
 msg['From'] = fromaddr
 msg['To'] = toaddr
 msg['Cc'] = toaddr1
-msg['Subject'] = "Emergency Service:ALLSTATE Insurance"
+msg['Subject'] = "Emergency Service:XXX Insurance"
 body = "There is something wrong with your car at "
 
 
@@ -39,7 +39,7 @@ while i==1:
         RT = datetime.datetime.now()
         Tx_string = RT.strftime("%I:%M%p on %B %d %Y")
         body = body + Tx_string
-        body = body + ". We are sending emergency services immediately to help you. \n \n Sincerely,\n AllState Insurance."
+        body = body + ". We are sending emergency services immediately to help you. \n \n Sincerely,\n XXX Insurance."
         msg.attach(MIMEText(body, 'plain'))
         im = "image.jpg"
         img_data = open(im, 'rb').read()
@@ -58,7 +58,7 @@ while i==1:
         server.ehlo()
         server.starttls()
         server.ehlo()
-        server.login(fromaddr, "Nepal9845@")
+        server.login(fromaddr, "password_for_sender_here")
         text = msg.as_string()
         server.sendmail(fromaddr, toaddr, text)
         server.sendmail(fromaddr, toaddr1, text)
