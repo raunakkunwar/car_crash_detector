@@ -16,6 +16,7 @@ void setup()
 }
 void loop()
 {
+  // Initalizing the axis for the accelerometer.
   int8_t x;
   int8_t y;
   int8_t z;
