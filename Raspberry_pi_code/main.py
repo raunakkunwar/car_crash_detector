@@ -12,16 +12,7 @@ from email.mime.image import MIMEImage
 from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
 from email.utils import COMMASPACE, formatdate
-from email import encoders
-
-msg = MIMEMultipart()
-fromaddr = "sender@gmail.com"
-toaddr = "receiver1@gmail.com"
-toaddr1 = "receiver2@gmail.com"
-msg = MIMEMultipart()
-msg['From'] = fromaddr
-msg['To'] = toaddr
-msg['Cc'] = toaddr1
+0msg['Cc'] = toaddr1
 msg['Subject'] = "Emergency Service:XXX Insurance"
 body = "There is something wrong with your car at "
 
